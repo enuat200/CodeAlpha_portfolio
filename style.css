@@ -60,6 +60,7 @@ body {
     gap: 80px;
     padding: 60px 5%;
     flex-wrap: wrap;
+    flex-direction: row-reverse;
 }
 .pic-wrapper {
     position: relative;
@@ -88,7 +89,12 @@ body {
     border: none;
     box-shadow: none;
 }
-
+/* mobile divice */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+    }
+}
 .home-content {
     max-width: 500px;
     color: white;
@@ -109,4 +115,97 @@ body {
 }
 .home-content h2 span {
     color: #00abf0;
+}
+#about {
+    padding: 80px 5%;
+    color: #fff;
+}
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+}
+
+/* Photo */
+.about-image-wrap {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+}
+.about-blob {
+    position: absolute;
+    inset: -20px;
+    border: 4px solid #00abf0;
+    border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
+    z-index: 0;
+}
+.about-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
+    z-index: 1;
+}
+
+/* Text content */
+.about-content {
+    max-width: 550px;
+}
+.about-label {
+    color: #00abf0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 0 8px;
+}
+.about-content h2 {
+    font-size: 34px;
+    margin: 0 0 15px;
+}
+.about-content h3 {
+    font-size: 18px;
+    margin: 0 0 15px;
+    color: #fff;
+    font-weight: 500;
+}
+.about-content p {
+    color: #b0bac5;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+.about-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.cv-btn-outline,
+.cv-btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background: #00abf0;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Mobile */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image-wrap {
+        margin-bottom: 30px;
+    }
+    .about-content {
+        max-width: 100%;
+    }
 }
