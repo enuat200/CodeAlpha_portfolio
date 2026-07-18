@@ -53,7 +53,7 @@
                 </div>
             </div>
 
-       <div class="wrap">
+       <div class="wrap" id="Skills">
   <h2>My Work <span>Skills</span></h2>
   <p class="sub">A snapshot of the languages and tools I work with, from front-end fundamentals to back-end logic and databases.</p>
  
@@ -134,12 +134,98 @@
    </div>
    </div>
 
-   <div class="wrap">
+   <div class="wrap" id="projects">
     <h2>My <span>Projects</span></h2>
     <p class="sub">Here are some of my full-stack and front-end project samples.</p>
-   </div>
 
-   </div>
+    <div class="project">
+      <div class="project-text">
+       
+        <h3>Project 1</h3>
+        <h4>Image Gallery</h4>
+        <p>
+          It is a front-end project built using HTML, CSS and JavaScript. It is very responsive, visually appealing and interactive, categorizing different pictures under different categories, allowing the user to enjoy high quality pictures and add favorites to easily access them the next time they use the system.
+        </p>
+        <div class="tech-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <a href="https://enuat200.github.io/CodeAlpha_ImageGallery/" class="project-link">
+          View Live Site <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <a href="https://enuat200.github.io/CodeAlpha_ImageGallery/" class="project-image-link" target="_blank" rel="noopener">
+        <div class="browser-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="browser-url">enuat200.github.io</span>
+        </div>
+        <img src="images/image-gallery.png" alt="Image Gallery project screenshot" class="project-image">
+        <div class="hover-overlay">
+          <span>Visit Website ↗</span>
+        </div>
+      </a>
+    </div>
+</div>
+<div class="wrap" id="contact">
+  <h2>Contact <span>Me</span></h2>
+  <p class="sub">Have a project in mind or just want to say hi? Send me a message.</p>
+
+  <div class="contact-card">
+    <h3>Contact me</h3>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or just say hello..." required></textarea>
+      </div>
+
+      <button type="submit" class="send-btn" id="sendBtn">
+        Send Message <i class="fa-solid fa-paper-plane"></i>
+      </button>
+
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </div>
+</div>
+ 
+<footer class="footer">
+  <div class="footer-content">
+    <span class="logo">Portfolio</span>
+
+    <div class="social-links">
+      <a href="https://github.com/enuat200" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/enas-atham-93740035b" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://instagram.com/enas10277" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/0939983591" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <p class="footer-copy">© 2026 Enas Atham. All rights reserved.</p>
+  </div>
+</footer>
+</div>
    </body>    
                 
 </html>
