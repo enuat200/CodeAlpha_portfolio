@@ -646,7 +646,7 @@ body {
 }
 
 .send-btn {
-  background: linear-gradient(135deg, #4f9dff, #b07af0);
+  background-color: #00abf0;
   color: #fff;
   border: none;
   padding: 14px 32px;
@@ -660,14 +660,9 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.send-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(79, 157, 255, 0.35);
-}
 
-.send-btn:active {
-  transform: translateY(0);
-}
+
+
 
 .form-status {
   margin-top: 14px;
