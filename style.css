@@ -13,22 +13,20 @@ body {
     background-color: #06111f;
     font-family: 'Segoe UI', Arial, sans-serif;
 }
-.container {
-    width: 95%;
-    margin: 5px auto;
-    min-height: 600px;
-    background: radial-gradient(circle at 20% 20%, #0d2438, #04101c 70%);
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-}
+
 
 /* Navbar */
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+    background: rgb(28, 28, 70);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .logo {
     font-size: 25px;
@@ -57,13 +55,24 @@ body {
 
 /* Hero */
 #home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    padding: 100px 5% 60px; 
-    flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-top: 150px;
+  min-height: calc(100vh - 90px - 60px);
+}
+
+#home .about-container {
     flex-direction: row-reverse;
+    gap: 90px;
+}
+
+@media (max-width: 768px) {
+  #home .about-container {
+    flex-direction: column-reverse;
+    gap: 40px;
+  } 
+   #home .pic-wrapper {
+    margin-top: 20px;
+  }
 }
 .pic-wrapper {
     position: relative;
@@ -92,47 +101,101 @@ body {
     border: none;
     box-shadow: none;
 }
-/* mobile divice */
-@media (max-width: 768px) {
-    #home {
-        flex-direction: column;
-    }
-}
+
 .home-content {
     max-width: 500px;
     color: white;
 }
 .hello {
-    color: #00abf0;
+    color: white;
     font-weight: bold;
     margin: 0 0 5px;
 }
-.home-content h1 {
-    font-size: 36px;
-    margin: 0 0 5px;
+.home-content h2 span{
+  color:#00abf0;
 }
 .home-content h2 {
-    font-size: 20px;
-    margin: 0 0 15px;
-    color: #fff;
+    font-size: 40px;
+    margin-bottom:15px;
 }
-.home-content h2 span {
+.home-content h3 {
+  color: #b0bac5;
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+.home-content h3 span {
     color: #00abf0;
 }
-
+.home-content p{
+  font-size: 20px;
+  line-height: 1.8;
+}
 /* About section */
 #about {
-    padding: 60px 5% 0;
-    color: #fff;
+  min-height: auto;
+  padding: 60px 5%;
+  display: block;
 }
 .about-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 90px;
     flex-wrap: wrap;
+    gap: 40px;
+}
+#about .about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 0;
 }
 
+.about-content {
+  text-align: center;
+}
+#about .about-content {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-content h2 {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  /*padding-bottom: 5px;*/
+  margin-bottom:15px;
+  text-align: center;
+  font-size: 40px; 
+}
+.about-content h2 span{
+  color: #00abf0;
+}
+
+.about-content h3 {
+  color: #b0bac5;
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+.about-content p {
+  color: #fff;
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.8;
+}
+.about-content p span 
+{
+  color:#00abf0;
+}
 /* Photo */
 .about-image-wrap {
     position: relative;
@@ -157,30 +220,13 @@ body {
 }
 
 /* Text content */
-.about-content {
-    max-width: 550px;
-}
+
 .about-label {
     color: #00abf0;
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 1px;
     margin: 0 0 8px;
-}
-.about-content h2 {
-    font-size: 34px;
-    margin: 0 0 15px;
-}
-.about-content h3 {
-    font-size: 18px;
-    margin: 0 0 15px;
-    color: #fff;
-    font-weight: 500;
-}
-.about-content p {
-    color: #b0bac5;
-    line-height: 1.7;
-    margin-bottom: 15px;
 }
 .about-buttons {
     display: flex;
@@ -215,7 +261,17 @@ body {
     }
 }
 
-/* ===== Skills section ===== */
+/* Skills section*/
+.section-content
+{
+ text-align: center;
+}
+.section-content h2{
+
+}
+.section-content p{
+  
+}
 .wrap {
     --skill-accent: #00abf0;
     --skill-accent-2: #3ec6f7;
@@ -246,59 +302,35 @@ body {
 }
 .wrap .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 50px;
+    text-align: left;
 }
-.wrap .card {
-    background: var(--skill-card);
-    border: 1px solid var(--skill-card-border);
-    border-radius: 16px;
-    padding: 32px 20px;
-    text-align: center;
-    transition: transform .25s ease, border-color .25s ease;
-}
-.wrap .card:hover {
-    transform: translateY(-6px);
-    border-color: var(--skill-accent);
-}
-.wrap .icon {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto 18px;
-    border-radius: 14px;
-    background: #16283b;
+.skill-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 12px;
+    margin-bottom: 10px;
 }
-.wrap .icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-.wrap .name {
-    font-size: 1.05rem;
+.skill-name {
     font-weight: 600;
-    margin-bottom: 16px;
+    font-size: 1.05rem;
+    color: #fff;
+}
+.skill-percent {
+    font-weight: 600;
+    color: var(--skill-accent);
 }
 .wrap .bar-track {
     background: #1c3550;
     border-radius: 20px;
-    height: 26px;
-    position: relative;
+    height: 10px;
     overflow: hidden;
 }
 .wrap .bar-fill {
     background: linear-gradient(90deg, var(--skill-accent), var(--skill-accent-2));
     height: 100%;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: #fff;
 }
 @media (max-width: 900px) {
     .wrap .grid {
@@ -607,4 +639,15 @@ body {
   color: #7a869f;
   font-size: 13px;
   margin: 0;
+}
+/* Sections */
+.page-section {
+  min-height: calc(100vh - 90px); /* fills the screen below the sticky navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: 90px; /* stops the sticky navbar covering the top of the section when you jump/scroll to it */
+}
+.nav-links a.active {
+  color: #00abf0;
 }
