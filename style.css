@@ -269,6 +269,16 @@ body {
         max-width: 100%;
     }
 }
+@media (max-width: 768px) {
+  #home {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .page-section {
+    min-height: auto;
+  }
+}
 
 /* Skills section*/
 .section-content
