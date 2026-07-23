@@ -13,7 +13,9 @@ body {
     background-color: #06111f;
     font-family: 'Segoe UI', Arial, sans-serif;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 
 /* Navbar */
 .navbar {
@@ -55,7 +57,22 @@ body {
 .nav-links a:hover {
     color: #00abf0;
 }
-
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    row-gap: 10px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
+}
 
 /* Hero */
 #home {
