@@ -277,16 +277,7 @@ body {
         max-width: 100%;
     }
 }
-@media (max-width: 768px) {
-  #home {
-    min-height: auto;
-    padding-bottom: 40px;
-  }
 
-  .page-section {
-    min-height: auto;
-  }
-}
 
 /* Skills section*/
 .section-content
@@ -735,21 +726,25 @@ body {
   margin: 0;
 }
 /* Sections */
+/* Sections */
 .page-section {
   min-height: calc(100vh - 90px); /* fills the screen below the sticky navbar */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  scroll-margin-top: 90px; /* stops the sticky navbar covering the top of the section when you jump/scroll to it */
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+  .page-section {
+    min-height: auto;
+  }
 }
 .nav-links a.active {
   color: #00abf0;
 }
 /* new connect-section updates */
-.connect-section
-{
 
-}
 .connect-section h3{
   margin-bottom: 30px;
 
@@ -760,8 +755,4 @@ body {
  .connect
 {
  text-align: center;
-}
-.contact-info .connect h2
-{
-
 }
