@@ -332,6 +332,13 @@ html, body {
     .cv-btn-outline {
     margin: 8px 6px;
   }
+  .wrap .bar-fill {
+        background: #00abf0;
+    }
+    .cv-btn-outline,
+    .cv-btn {
+        background: #00abf0;
+    }
 }
 
 
