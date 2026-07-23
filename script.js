@@ -22,4 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', setActiveLink);
   setActiveLink(); // run once on load
+
+const fadeEls = document.querySelectorAll('.page-section, .info-card, .project');
+fadeEls.forEach(el => el.classList.add('fade-init'));
+
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+fadeEls.forEach(el => fadeObserver.observe(el));
 });
