@@ -61,7 +61,15 @@ body {
 #home {
   justify-content: flex-start;
   padding-top: 150px;
-  min-height: calc(100vh - 90px - 60px);
+  min-height: calc(100vh - 90px - 60px); /* desktop: fills the screen */
+}
+
+@media (max-width: 768px) {
+  #home {
+    padding-top: 100px;
+    padding-bottom: 65px;
+    min-height: auto; /* mobile: only as tall as content */
+  }
 }
 
 #home .about-container {
@@ -78,6 +86,7 @@ body {
     margin-top: 20px;
   }
 }
+
 .pic-wrapper {
     position: relative;
     width: 340px;
@@ -110,7 +119,6 @@ body {
     max-width: 500px;
     color: white;
     display: flow-root;
-
 }
 .hello {
     color: white;
