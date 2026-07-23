@@ -326,6 +326,9 @@ html, body {
     .about-content {
         max-width: 100%;
     }
+    .logo {
+    display: none;
+  }
 }
 
 
