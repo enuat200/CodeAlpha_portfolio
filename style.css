@@ -61,6 +61,7 @@ body {
 #home {
   justify-content: flex-start;
   padding-top: 150px;
+<<<<<<< HEAD
   min-height: calc(100vh - 90px - 60px); /* desktop: fills the screen */
 }
 
@@ -70,6 +71,9 @@ body {
     padding-bottom: 65px;
     min-height: auto; /* mobile: only as tall as content */
   }
+=======
+  min-height: auto;
+>>>>>>> 94586ce7afa0e75d13c015904252ad3a839b89e6
 }
 
 #home .about-container {
